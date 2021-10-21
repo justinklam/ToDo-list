@@ -1,4 +1,4 @@
-# midterm project
+# TODO app
 
 ## Project Setup
 
