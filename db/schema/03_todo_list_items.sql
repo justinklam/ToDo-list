@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS todo_lists_items CASCADE;
+
+CREATE TABLE todo_lists_items (
+  id SERIAL PRIMARY KEY NOT NULL,
+  user_list_id INTEGER REFERENCES user_lists(id),
+  to_do_task VARCHAR(255) NOT NULL,
+  to_do_date TIMESTAMP NOT NULL,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
