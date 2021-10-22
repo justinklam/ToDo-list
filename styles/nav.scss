@@ -1,10 +1,25 @@
-.side-nav {
+nav{
+  background-color: #C4C4C4;
+  height: 95px;
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 6em;
-  height: 100%;
-  width: 10%;
-  background:rgb(49, 49, 49);
-  color: white;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  font-size: larger;
+  color: black;
+  padding: 20px;
+}
+
+.container {
+  padding: 20px;
+}
+
+nav span {
+  padding: 10px;
 }
