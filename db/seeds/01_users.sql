@@ -5,21 +5,49 @@ INSERT INTO users (name, email, password) VALUES ('Anthony', 'adognamedpotato@ou
 INSERT INTO users (name, email, password) VALUES ('Justin', 'justin@gmail.com', '4');
 INSERT INTO users (name, email, password) VALUES ('Dara', 'dara@gmail.com', '5');
 
--- These are the 5 categories
+-- These are the 5 categories || Category IDs are: 1- Films, 2- Restaurants, 3- Books (To Read), 4- Products (To Buy) | Other
 INSERT INTO to_do_categories (category_name) VALUES ('Films');
 INSERT INTO to_do_categories (category_name) VALUES ('Restaurants');
 INSERT INTO to_do_categories (category_name) VALUES ('Books');
 INSERT INTO to_do_categories (category_name) VALUES ('Products');
 INSERT INTO to_do_categories (category_name) VALUES ('Other');
 
--- Category IDs are: 1- Films, 2- Restaurants, 3- Books (To Read), 4- Products (To Buy) | Other
+-- Todo lists for Category 1 - Films
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Casino Royale', '2021-10-20 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (2, 1, 'Casino Royale', '2021-10-20 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (3, 1, 'Casino Royale', '2021-10-20 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Casino Royale', '2021-10-20 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (5, 1, 'Casino Royale', '2021-10-20 20:00:00', TRUE);
+
+-- Todo lists for Category 2 - Restaurants
 INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Red Lobster', '2021-10-30 20:00:00', TRUE);
 INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (2, 2, 'Red Lobster', '2021-10-30 20:00:00', TRUE);
 INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (3, 2, 'Red Lobster', '2021-10-30 20:00:00', TRUE);
 INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (4, 2, 'Red Lobster', '2021-10-30 20:00:00', TRUE);
 INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (5, 2, 'Red Lobster', '2021-10-30 20:00:00', TRUE);
 
+-- Todo lists for Category 3 - Books
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (1, 3, 'Hitchhiker''s Guide to the Galaxy', '2021-10-15 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (2, 3, 'Hitchhiker''s Guide to the Galaxy', '2021-10-15 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (3, 3, 'Hitchhiker''s Guide to the Galaxy', '2021-10-15 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (4, 3, 'Hitchhiker''s Guide to the Galaxy', '2021-10-15 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (5, 3, 'Hitchhiker''s Guide to the Galaxy', '2021-10-15 20:00:00', TRUE);
 
+-- Todo lists for Category 4 - Products
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (1, 4, 'new iPhone out Sept 25th!', '2021-10-10 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (2, 4, 'new iPhone out Sept 25th!', '2021-10-10 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (3, 4, 'new iPhone out Sept 25th!', '2021-10-10 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (4, 4, 'new iPhone out Sept 25th!', '2021-10-10 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (5, 4, 'new iPhone out Sept 25th!', '2021-10-10 20:00:00', TRUE);
+
+-- Todo lists for Category 5 - Other
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Oil change due Friday', '2021-10-31 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (2, 5, 'Oil change due Friday', '2021-10-31 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (3, 5, 'Oil change due Friday', '2021-10-31 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (4, 5, 'Oil change due Friday', '2021-10-31 20:00:00', TRUE);
+INSERT INTO todo_lists (user_id, category_id, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Oil change due Friday', '2021-10-31 20:00:00', TRUE);
+
+-- Comments feature TBC
 -- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Can't wait to go down the rabbit hole!", 1, 1);
 -- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Meeting after the Quidditch match!", 2, 1);
 -- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Remember to confirm reservation", 3, 1);
