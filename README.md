@@ -1,4 +1,4 @@
-# TODO app
+# LHL Node Skeleton
 
 ## Project Setup
 
