@@ -5,12 +5,12 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 const sassMiddleware = require("./lib/sass-middleware");
 const express = require("express");
-const cookieSession = require('cookie-session');
+const cookieSession = require("cookie-session");
 const morgan = require("morgan");
-const path = require('path');
+const path = require("path");
 
-const database = require('./lib/database');
-const apiRoutes = require('./lib/apiRoutes');
+const database = require("./lib/database");
+const apiRoutes = require("./lib/apiRoutes");
 const app = express();
 
 // PG database client/connection setup - unneeded
@@ -27,10 +27,12 @@ app.use(morgan("dev"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cookieSession({
-  name: "session",
-  keys: ['key1', 'key2']
-}));
+app.use(
+  cookieSession({
+    name: "session",
+    keys: ["key1", "key2"],
+  })
+);
 
 app.use(
   "/styles",
@@ -46,7 +48,7 @@ app.use(express.static("public"));
 // Separated Routes for each Resource
 const apiRouter = express.Router();
 apiRoutes(apiRouter, database);
-app.use('/api', apiRouter);
+app.use("/api", apiRouter);
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -62,11 +64,11 @@ app.get("/", (req, res) => {
 });
 
 // NodeJS Express to serve static file
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, "./public")));
 
-app.get("/test", (req, res) => {
-  res.send("🤗");
-});
+// app.get("/test", (req, res) => {
+//   res.send("🤗");
+// });
 
 app.listen(PORT, () => {
   console.log(`ToDo-List app listening on Port: ${PORT} 😈`);

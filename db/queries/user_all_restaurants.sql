@@ -3,4 +3,4 @@
 
 SELECT to_do_task as Restaurants
 FROM user_lists
-WHERE user_lists.category_id = 2 AND user_lists.user_id = 2;
+WHERE category_id = 2 AND user_id = 2;

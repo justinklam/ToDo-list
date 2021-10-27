@@ -3,4 +3,4 @@
 
 SELECT to_do_task as Other_items
 FROM user_lists
-WHERE user_lists.category_id = 5 AND user_lists.user_id = 5;
+WHERE category_id = 5 AND user_id = 5;

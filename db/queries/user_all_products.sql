@@ -3,4 +3,4 @@
 
 SELECT to_do_task as Products
 FROM user_lists
-WHERE user_lists.category_id = 4 AND user_lists.user_id = 4;
+WHERE category_id = 4 AND user_id = 4;

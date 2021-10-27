@@ -3,4 +3,4 @@
 
 SELECT to_do_task as Films
 FROM user_lists
-WHERE user_lists.category_id = 1 AND user_lists.user_id = 1;
+WHERE category_id = 1 AND user_id = 1;
