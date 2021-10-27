@@ -2,3 +2,10 @@
 -- INSERT INTO widgets (name, user_id) VALUES ('Sprockets', 1);
 -- INSERT INTO widgets (name, user_id) VALUES ('Chains', 2);
 -- INSERT INTO widgets (name, user_id) VALUES ('Bearings', 2);
+
+-- Comments feature TBC
+-- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Can't wait to go down the rabbit hole!", 1, 1);
+-- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Meeting after the Quidditch match!", 2, 1);
+-- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Remember to confirm reservation", 3, 1);
+-- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Meeting before the big game!", 4, 1);
+-- INSERT INTO user_comments (body, user_id, todo_list) VALUES ("Don't forget to invite friend from work!", 5, 1);
