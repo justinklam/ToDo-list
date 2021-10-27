@@ -24,7 +24,9 @@
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
 </head>
 
@@ -34,7 +36,7 @@
     <span class="title">SMART List</span>
     <div class="container">
       <span class="home"><a href="#">Home</a></span>
-      <span class="login"><a href="#">Login</a></span>
+      <span class="login" id="login"><a href="#">Login</a></span>
       <span class="register"><a href="#">Register</a></span>
     </div>
 
@@ -54,7 +56,7 @@
       </ul>
     </div>
     <div class="main_content">
-      <div class="header">My lists</div>
+      <div class="header">My Lists</div>
       <!-- <div class="info">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Fames ac turpis egestas integer eget aliquet nibh praesent. Ac tortor vitae purus faucibus ornare
@@ -69,28 +71,15 @@
   <header>
 
   </header>
-  <!--
-  <div class="body-container">
-    <div class="side-nav">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Books</a></li>
-          <li><a href="#">Shopping</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">Restaurants</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div> -->
+
 
   <!-- modal section -->
-  <div class="bg-modal">
+  <div class="bg-modal" id="bg-modal">
     <div class="modal-content">
       <h1>Login</h1>
       <input type="text" class="email" placeholder="email">
       <input type="text" class="password" placeholder="password">
-      <button type="submit" class="submit-btn">Submit</button>
+      <button type="submit" class="submit-btn"><a href="#">Submit</a></button>
       <footer>Don't have an account? &nbsp;<a href="#">Click here</a> &nbsp;to register</footer>
     </div>
   </div>
