@@ -77,8 +77,6 @@ $(document).ready(function () {
   // template for bootstrap cards
 
   const formatOutput = function (bookImg, title, author) {
-    console.log(title + "" + author + " " + bookImg);
-
     // view the book once user clicks on the link
     // let viewUrl = "book.html ? isbn = " + bookIsbn; //constructing link for bookviewer
 
