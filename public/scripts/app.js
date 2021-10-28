@@ -1,30 +1,4 @@
 // Client facing scripts here
-<<<<<<< HEAD
-$(document).ready(function () {
-
-  $('.login').on('click', function () {
-    $('.bg-modal').css({ 'visibility': 'visible' })
-  });
-
-  $('button').on('click', function () {
-    $('.bg-modal').css({ 'visibility': 'hidden' })
-  })
-
-
-
-
-
-
-
-
-
-
-
-
-})
-
-
-=======
 // remember to create link in HTML file
 // <script src="./app.js"></script>
 
@@ -39,6 +13,14 @@ $(document).ready(function () {
   // default img if return does not have an image
   let placeHolder = '<img src="https://via.placeholder.com/150">';
   let searchData;
+
+  $(".login").on("click", function () {
+    $(".bg-modal").css({ visibility: "visible" });
+  });
+
+  $("button").on("click", function () {
+    $(".bg-modal").css({ visibility: "hidden" });
+  });
 
   //-------------------------------------- listener for search/submit button (See HTML) - ex here: "#search"
   $("#search").click(function () {
@@ -130,4 +112,3 @@ $(document).ready(function () {
     alert("search term can not be empty!");
   };
 });
->>>>>>> TJ_books_API
