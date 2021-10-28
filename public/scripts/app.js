@@ -1,11 +1,6 @@
-// Client facing scripts here
-// remember to create link in HTML file
-// <script src="./app.js"></script>
-
 $(document).ready(function() {
 
   // Displays Books once book-icon is clicked
-
   const booksSection = function() {
 
     const HTML = `<div class='header'>Books<div>`;
@@ -44,7 +39,7 @@ $(document).ready(function() {
   };
   moviesSection();
 
-  // Displayes resturant lists when resturant icon is displayed
+  // Displays resturant lists when resturant icon is displayed
   const restaurantSection = function() {
 
     const HTML = `<div class='header'>Restaurants<div>`;
@@ -69,7 +64,6 @@ $(document).ready(function() {
   };
   homeSection();
 
-
   const registrationToggle = function() {
 
     $('.register').on('click', function() {
@@ -90,9 +84,11 @@ $(document).ready(function() {
       $('.bg-modal').css({ 'visibility': 'hidden' });
     });
   };
+
   loginToggle();
   registrationToggle();
 
+  // ----------- API SECTION ---------- //
   // Books API
   //values that we will use from the res API (JSON results)
   let item, title, author, bookImg;
@@ -122,10 +118,10 @@ $(document).ready(function() {
         dataType: "json",
         success: function(response) {
           // display in console
-          console.log("response from AJAX request", response);
+          console.log("Response from AJAX request", response);
 
           if (response.totalItems === 0) {
-            alert("no results!... try again!");
+            alert("No results!... try again!");
           } else {
             $("#title").animate({ "margin-top": "5px" }, 1000); //search box animation
             $(".book-list").css("visibility", "visible");
@@ -191,7 +187,7 @@ $(document).ready(function() {
 
   //handling error for empty search box
   const displayError = function() {
-    alert("search term can not be empty!");
+    alert("Search term can not be empty!");
   };
 
 });
