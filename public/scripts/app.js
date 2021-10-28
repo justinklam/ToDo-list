@@ -1,87 +1,80 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
   // Displays Books once book-icon is clicked
-  const booksSection = function() {
-
+  const booksSection = function () {
     const HTML = `<div class='header'>Books<div>`;
 
-    $('#book-icon').click(function() {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#book-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
   booksSection();
 
   //Displays shopping list when shopping icon is clicked
-  const shoppingSection = function() {
-
+  const shoppingSection = function () {
     const HTML = `<div class='header'>Shopping<div>`;
 
-    $('#shopping-icon').click(function() {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#shopping-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
   shoppingSection();
 
   // Displays movie lists when movie icon is clicked
-  const moviesSection = function() {
-
+  const moviesSection = function () {
     const HTML = `<div class='header'>Movies<div>`;
 
-    $('#movie-icon').click(function() {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#movie-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
   moviesSection();
 
   // Displays resturant lists when resturant icon is displayed
-  const restaurantSection = function() {
-
+  const restaurantSection = function () {
     const HTML = `<div class='header'>Restaurants<div>`;
 
-    $('#resturaunt-icon').click(function() {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#resturaunt-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
   restaurantSection();
 
-  const homeSection = function() {
-
+  const homeSection = function () {
     const HTML = `<div class='header'>My Lists<div>`;
 
-    $('.home').click(function() {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $(".home").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
   homeSection();
 
-  const registrationToggle = function() {
-
-    $('.register').on('click', function() {
-      $('.bg-modal_register').css({ 'visibility': 'visible' });
+  const registrationToggle = function () {
+    $(".register").on("click", function () {
+      $(".bg-modal_register").css({ visibility: "visible" });
     });
 
-    $('button').on('click', function() {
-      $('.bg-modal_register').css({ 'visibility': 'hidden' });
+    $("button").on("click", function () {
+      $(".bg-modal_register").css({ visibility: "hidden" });
     });
   };
 
-  const loginToggle = function() {
-    $('.login').on('click', function() {
-      $('.bg-modal').css({ 'visibility': 'visible' });
+  const loginToggle = function () {
+    $(".login").on("click", function () {
+      $(".bg-modal").css({ visibility: "visible" });
     });
 
-    $('button').on('click', function() {
-      $('.bg-modal').css({ 'visibility': 'hidden' });
+    $("button").on("click", function () {
+      $(".bg-modal").css({ visibility: "hidden" });
     });
   };
 
@@ -94,14 +87,19 @@ $(document).ready(function() {
   let item, title, author, bookImg;
   let outputList = document.getElementById("list-output");
   let bookURL = "https://www.googleapis.com/books/v1/volumes?q=";
-  let apiKey = "key=AIzaSyDtXC7kb6a7xKJdm_Le6_BYoY5biz6s8Lw";
+  // let apiKey = "key=AIzaSyDtXC7kb6a7xKJdm_Le6_BYoY5biz6s8Lw";
 
   // default img if return does not have an image
   let placeHolder = '<img src="https://via.placeholder.com/150">';
   let searchData;
 
+  // Event handler for text-box to remove error
+  $("#search-box").keydown(function () {
+    $("#error").text("").slideUp(500);
+  });
+
   //-------------------------------------- listener for search/submit button (See HTML) - ex here: "#search"
-  $("#search").click(function() {
+  $("#search").click(function () {
     // empty HTML output
     outputList.innerHTML = "";
 
@@ -116,19 +114,23 @@ $(document).ready(function() {
       $.ajax({
         url: bookURL + searchData,
         dataType: "json",
-        success: function(response) {
+        success: function (response) {
           // display in console
           console.log("Response from AJAX request", response);
 
           if (response.totalItems === 0) {
-            alert("No results!... try again!");
+            console.log("error here");
+            $("#error").text("🛑 No results!... try again!").slideDown(500);
+            // $("#error").removeClass("error");
+            return;
+            // alert("No results!... try again!");
           } else {
             $("#title").animate({ "margin-top": "5px" }, 1000); //search box animation
             $(".book-list").css("visibility", "visible");
             displayResults(response);
           }
         },
-        error: function() {
+        error: function () {
           alert("Something went wrong.. <br>" + "Try again!");
         },
       });
@@ -138,7 +140,7 @@ $(document).ready(function() {
   });
   // function to display results in HTML | loop through items: Array(10) from books API to capture elements we want
 
-  const displayResults = function(response) {
+  const displayResults = function (response) {
     for (let i = 0; i < response.items.length; i += 1) {
       item = response.items[i];
 
@@ -162,7 +164,7 @@ $(document).ready(function() {
 
   // template for bootstrap cards
 
-  const formatOutput = function(bookImg, title, author) {
+  const formatOutput = function (bookImg, title, author) {
     // view the book once user clicks on the link
     // let viewUrl = "book.html ? isbn = " + bookIsbn; //constructing link for bookviewer
 
@@ -186,8 +188,7 @@ $(document).ready(function() {
   };
 
   //handling error for empty search box
-  const displayError = function() {
+  const displayError = function () {
     alert("Search term can not be empty!");
   };
-
 });
