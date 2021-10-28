@@ -18,6 +18,9 @@ nav{
 
 .container {
   padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
 }
 
 nav span {
