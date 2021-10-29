@@ -1,3 +1,5 @@
+// Clean up code
+
 $(document).ready(function () {
 
   // Displays Books once book-icon is clicked
@@ -84,7 +86,18 @@ $(document).ready(function () {
       $('.bg-modal').css({ 'visibility': 'hidden' });
     });
   };
+  const createNewTaskToggle = function () {
+    $('#dropdown').on('click', function () {
+      $('.bg-modal_search').css({ 'visibility': 'visible' });
+    });
 
+    $('#test').on('click', function () {
+      $('.bg-modal_search').css({ 'visibility': 'hidden' });
+    });
+  }
+
+
+  createNewTaskToggle();
   loginToggle();
   registrationToggle();
 
@@ -195,3 +208,5 @@ $(document).ready(function () {
     alert("Search term can not be empty!");
   };
 });
+
+$('#myModal#exampleModalCenter').modal('show')
