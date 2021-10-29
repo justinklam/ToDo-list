@@ -61,6 +61,11 @@ $(document).ready(function () {
     $('.home').click(function () {
       $('.header').hide();
       $('.main_content').append(HTML);
+          $.ajax({
+      method: "GET",
+      url: "/api/index",
+      data: {input}
+    })
     });
     return;
   };
