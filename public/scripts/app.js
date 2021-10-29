@@ -89,7 +89,17 @@ $(document).ready(function () {
   registrationToggle();
 
 
+  // $('.search-box').submit(function(event) {
+  //   event.preventDefault();
+  //   let input = $('.search-input').val();
+  //   console.log('Search input-----', input);
 
+  //   // $.ajax({
+  //   //   method: "POST",
+  //   //   url: "/api/createTask",
+  //   //   data: {input}
+  //   })
+  // })
 
 
 
