@@ -49,10 +49,10 @@
       <!-- make home a link later -->
       <ul>
         <li id="user-icon"><a href="#"><i class="fas fa-user-circle"></i></a></li>
-        <li id="book-icon"><a href="#"><i class="fas fa-book"></i></a></li>
-        <li id="shopping-icon"><a href="#"><i class="fas fa-shopping-basket"></i></a></li>
-        <li id='movie-icon'><a href="#"><i class="fas fa-film"></i></a></li>
-        <li id="resturaunt-icon"><a href="#"><i class="fas fa-utensils"></i></a></li>
+        <li id="book-icon"><a href="/api/allBooks"><i class="fas fa-book"></i></a></li>
+        <li id="shopping-icon"><a href="/api/allProducts"><i class="fas fa-shopping-basket"></i></a></li>
+        <li id='movie-icon'><a href="/api/allFilms"><i class="fas fa-film"></i></a></li>
+        <li id="resturaunt-icon"><a href="/api/allRestaurants"><i class="fas fa-utensils"></i></a></li>
       </ul>
     </div>
     <div class="main_content">
@@ -83,23 +83,28 @@
 
   <!-- modal section -->
   <div class="bg-modal" id="bg-modal">
+    <form action="/api/login" method="POST">
     <div class="modal-content">
       <h1>Login</h1>
       <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
       <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
       <button type="submit" class="btn btn-primary">Submit</button>
       <footer>Don't have an account? &nbsp;<a href="#">Click here</a> &nbsp;to register</footer>
+    </form>
     </div>
   </div>
 
   <!-- register modal -->
   <div class="bg-modal_register" id="bg-modal_register">
+    <form action="/api/register" method="POST">
     <div class="modal-content_register">
       <h1>Register</h1>
+      <input type="text" name="name" class="form-control" placeholder="name" required autofocus>
       <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
       <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
       <button type="submit" class="btn btn-primary">Submit</button>
       <footer>Already have an account? &nbsp;<a href="#">Click here</a> &nbsp;to login</footer>
+    </form>
     </div>
   </div>
 
