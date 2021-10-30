@@ -39,8 +39,8 @@
     <span class="home"><a href="/api/lists">Home</a></span>
     <span class="login" id="login"><a href="#">Login</a></span>
     <span class="register"><a href="#">Register</a></span>
-
   </div>
+</nav>
 
   <div class="wrapper">
     <div class="sidebar">
@@ -57,13 +57,16 @@
     <div>
 
       <div class="main_content">
-        <div class="header">Reading Lists</div>
+        <div class="main_content_header">
+          <div class="header">Reading Lists</div>
+          <button id="dropdown" type="submit" class="btn btn-primary">Add New Task</button>
+        </div>
         <div class="list-container">
           <% for (const todo of todos) {%>
             <div class="task_card">
               <label class="todo_label"><%= todo.title %></label>
               <div class="to_do_task"><%= todo.to_do_task %></div>
-              <div class="to_do_date"><%= todo.to_do_date %></div>
+              <div class="to_do_date"><%= todo.to_do_date.toDateString() %></div>
             </div>
             <% } %>
       </div>
@@ -126,8 +129,6 @@
     </form>
   </div>
   </div>
-
-  <button id="dropdown" type="submit" class="btn btn-primary">Add New Task</button>
 
   <!-- search bar section -->
   <div class="bg-modal_search" id="bg-modal_search">
