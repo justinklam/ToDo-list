@@ -11,7 +11,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
-  <title>Home Page</title>
+  <title>All Lists</title>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -31,18 +31,16 @@
   <script type="text/javascript" src="/scripts/app.js"></script>
 </head>
 
-<body>
-  <!-- Fixed nav -->
-  <nav>
-    <span class="title">SMART List</span>
-    <div class="container">
-      <span class="home"><a href="/api/lists">Home</a></span>
-      <span class="login" id="login"><a href="#">Login</a></span>
-      <span class="register"><a href="#">Register</a></span>
-    </div>
 
-  </nav>
-
+<!-- Fixed nav -->
+<nav>
+  <span class="title">SMART List</span>
+  <div class="container">
+    <span class="home"><a href="/api/lists">Home</a></span>
+    <span class="login" id="login"><a href="#">Login</a></span>
+    <span class="register"><a href="#">Register</a></span>
+  </div>
+</nav>
 
   <div class="wrapper">
     <div class="sidebar">
@@ -56,54 +54,103 @@
         <li id="resturaunt-icon"><a href="/api/allRestaurants"><i class="fas fa-utensils"></i></a></li>
       </ul>
     </div>
+    <div>
 
-    <div class="main_content">
-    <div class="header">All My Lists</div>
-
-      <div class="list-container">
+      <div class="main_content">
+        <div class="main_content_header">
+          <div class="header">All Lists</div>
+          <button id="dropdown" type="submit" class="btn btn-primary">Add New Task</button>
+        </div>
+        <div class="list-container">
           <% for (const todo of todos) {%>
             <div class="task_card">
               <label class="todo_label"><%= todo.title %></label>
               <div class="to_do_task"><%= todo.to_do_task %></div>
-              <div class="to_do_date"><%= todo.to_do_date %></div>
+              <div class="to_do_date"><%= todo.to_do_date.toDateString() %></div>
             </div>
             <% } %>
       </div>
+      </div>
+      <!-- <form class="search-box" style="padding: 200px" action="/api/createtask" method="post">
+        <input name="title" class="search-input" type="text" placeholder="title">
+        <input name="to_do_task" class="form-control" placeholder="todotask" required autofocus>
+        <input name="to_do_date" class="form-control" placeholder="YYYY-MM-DD" required autofocus>
+        <button type="submit">SUBMIT</button>
+        </form> -->
+    </div>
+  </div>
+  </div>
 
+  <!-- ------------------------------------  temporary formatting to test books API -->
+
+  <!-- <div class="container" style="margin-left: 300px; margin-top: 300px;">
+
+  <div id="input" class="input-group mx-auto col-lg-6 col-md-8 col-sm-12">
+    <input id="search-box" type="text" class="form-control" placeholder="Search Books!...">
+    <button id="search" class="btn btn-primary" onclick="">Search</button>
+    <div id="list-output">
     </div>
 
+        </div>
+  </div> -->
+
+  <!-- ----------------------------------------------- end of temporary formatting to test books API  -->
+
   <header>
+
   </header>
 
 
   <!-- modal section -->
-  <!-- login modal -->
   <div class="bg-modal" id="bg-modal">
     <form action="/api/login" method="POST">
-    <div class="modal-content">
-      <h1>Login</h1>
-      <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
-      <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="button" class="btn btn-secondary" data-dismiss="modal" id="test">Close</button>
-      <footer>Don't have an account? &nbsp;<a href="#">Click here</a> &nbsp;to register</footer>
+      <div class="modal-content">
+        <h1>Login</h1>
+        <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
+        <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="test">Close</button>
+        <footer>Don't have an account? &nbsp;<a href="#">Click here</a> &nbsp;to register</footer>
     </form>
-    </div>
+  </div>
   </div>
 
   <!-- register modal -->
   <div class="bg-modal_register" id="bg-modal_register">
     <form action="/api/register" method="POST">
-    <div class="modal-content_register">
-      <h1>Register</h1>
-      <input type="text" name="name" class="form-control" placeholder="name" required autofocus>
-      <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
-      <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="button" class="btn btn-secondary" data-dismiss="modal" id="test">Close</button>
-      <footer>Already have an account? &nbsp;<a href="#">Click here</a> &nbsp;to login</footer>
+      <div class="modal-content_register">
+        <h1>Register</h1>
+        <input type="text" name="name" class="form-control" placeholder="name" required autofocus>
+        <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
+        <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="test">Close</button>
+        <footer>Already have an account? &nbsp;<a href="">Click here</a> &nbsp;to login</footer>
     </form>
-    </div>
+  </div>
+  </div>
+
+  <!-- search bar section -->
+  <div class="bg-modal_search" id="bg-modal_search">
+    <form action="/api/createtask" method="POST">
+      <div class="modal-content_search">
+        <h1>Add New Task</h1>
+        <input type="text" name="title" class="form-control" placeholder="Task title" required autofocus>
+        <input name="to_do_task" class="form-control" placeholder="Notes" required autofocus>
+        <input type="text" name="to_do_date" class="form-control" placeholder="Start date (YYYY-MM-DD)" required
+          autofocus>
+        <!-- <select class="form-select" aria-label="Default select example">
+        <option selected>Choose a category</option>
+        <option value="1">Books</option>
+        <option value="2">Movies</option>
+        <option value="3">Shopping</option>
+        <option value="4">Restaurants</option>
+      </select> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>
+
+    </form>
+  </div>
   </div>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -111,6 +158,6 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-</body>
+  </body>
 
 </html>
