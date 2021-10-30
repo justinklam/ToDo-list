@@ -5,20 +5,23 @@
 }
 
 .task_card {
-  flex: 0 0 30%;
-  background-color: rgb(211, 209, 209);
-  box-shadow: 0 0 2px black;
-  margin-bottom: 5px;
+  // flex: 0 0 31%;
+  width:18%;
+  background-color: rgb(241, 241, 189);
+  box-shadow: 0 0 4px black;
+  margin-bottom: 8px;
+  border-radius: 5px;
 }
 
 .todo_label {
   font-weight: bold;
+  margin: 5px;
 }
 
 .to_do_task {
-
+  margin: 5px;
 }
 
 .to_do_date {
-
+  margin: 5px;
 }
