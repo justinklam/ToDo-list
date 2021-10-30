@@ -131,7 +131,10 @@ $(document).ready(function () {
           }
         },
         error: function () {
-          alert("Something went wrong.. <br>" + "Try again!");
+          // alert("Something went wrong.. <br>" + "Try again!");
+          $("#error")
+            .text("🛑  Something went wrong.. <br>" + "Try again!")
+            .slideDown(500);
         },
       });
     }
@@ -189,6 +192,7 @@ $(document).ready(function () {
 
   //handling error for empty search box
   const displayError = function () {
-    alert("Search term can not be empty!");
+    // alert("Search term can not be empty!");
+    $("#error").text("🛑  Search term can not be empty!").slideDown(500);
   };
 });
