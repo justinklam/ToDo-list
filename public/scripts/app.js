@@ -89,7 +89,7 @@ $(document).ready(function () {
       $(".bg-modal_search").css({ visibility: "visible" });
     });
 
-    $("#test").on("click", function () {
+    $("#close").on("click", function () {
       $(".bg-modal_search").css({ visibility: "hidden" });
     });
   };
