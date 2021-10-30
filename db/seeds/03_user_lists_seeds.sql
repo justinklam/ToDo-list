@@ -12,42 +12,42 @@ INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_
 INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'Austerlitz', '2001-10-02', TRUE);
 INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'The Amber Spyglass', '2000-10-03', TRUE);
 -- Alice multiple Restaurants
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (2, 2, 'Restaurants List 1', 'Antonietta', '2021-06-05', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (2, 2, 'Restaurants List 1', 'Hoogan & Beaufort', '2021-07-01', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (2, 2, 'Restaurants List 1', 'Kwizinn', '2021-07-02', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (2, 2, 'Restaurants List 1', 'Le Petit Alep Bistro', '2021-07-06', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (2, 2, 'Restaurants List 1', 'Restaurant Joon', '2021-08-01', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (2, 2, 'Restaurants List 1', 'Maison Publique', '2021-09-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Antonietta', '2021-06-05', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Hoogan & Beaufort', '2021-07-01', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Kwizinn', '2021-07-02', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Le Petit Alep Bistro', '2021-07-06', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Restaurant Joon', '2021-08-01', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Maison Publique', '2021-09-20', TRUE);
 -- Alice multiple films
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Daniel Craig Films List 1', 'Casino Royale', '2006-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Daniel Craig Films List 1', 'Quantum of Solace', '2008-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Daniel Craig Films List 1', 'Skyfall', '2012-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Daniel Craig Films List 1', 'Spectre', '2015-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Daniel Craig Films List 1', 'No Time To Die', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Nolan Films List 2', 'Tenet', '2020-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Nolan Films List 2', 'Inception', '2010-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Nolan Films List 2', 'The Prestige', '2006-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 1, 'Nolan Films List 2', 'Interstellar', '2014-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Daniel Craig Films List 1', 'Casino Royale', '2006-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Daniel Craig Films List 1', 'Quantum of Solace', '2008-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Daniel Craig Films List 1', 'Skyfall', '2012-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Daniel Craig Films List 1', 'Spectre', '2015-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Daniel Craig Films List 1', 'No Time To Die', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Nolan Films List 2', 'Tenet', '2020-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Nolan Films List 2', 'Inception', '2010-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Nolan Films List 2', 'The Prestige', '2006-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Nolan Films List 2', 'Interstellar', '2014-10-20', TRUE);
 -- Alice multiple products
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'BIG Boardgame List 1', 'Gloomhaven', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'BIG Boardgame List 1', 'Pandemic Legacy: Season 1', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'BIG Boardgame List 1', 'Terraforming Mars', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'Strategy Boardgame List 1', 'Scythe', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'Strategy Boardgame List 1', 'Everdell', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'Strategy Boardgame List 1', 'Concordia', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'Strategy Boardgame List 1', 'Above and Below', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'Small Boardgame List 1', 'Hive', '2021-10-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (4, 4, 'Small Boardgame List 1', 'Air, Land, & Sea', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'BIG Boardgame List 1', 'Gloomhaven', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'BIG Boardgame List 1', 'Pandemic Legacy: Season 1', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'BIG Boardgame List 1', 'Terraforming Mars', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'Strategy Boardgame List 1', 'Scythe', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'Strategy Boardgame List 1', 'Everdell', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'Strategy Boardgame List 1', 'Concordia', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'Strategy Boardgame List 1', 'Above and Below', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'Small Boardgame List 1', 'Hive', '2021-10-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'Small Boardgame List 1', 'Air, Land, & Sea', '2021-10-20', TRUE);
 -- Alice multiple other
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Don''t forget List 1', 'read article about new Web FLEX program at Lighthouse Labs!', '2021-02-05', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Don''t forget List 1', 'call landlord about front door', '2021-04-11', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Don''t forget List 1', 'buy new earphones', '2021-05-01', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Don''t forget List 1', 'submit receipts to insurance', '2021-05-13', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Don''t forget List 1', 'pick-up groceries for date night', '2021-05-25', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Week-end List', 'manicure scheduled for Saturday', '2021-06-20', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'School List', 'buy all school books for English class', '2021-06-25', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Birthday', 'call dad for his birthday', '2021-07-10', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (5, 5, 'Self-care', 'manicure scheduled for Saturday', '2021-07-30', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Don''t forget List 1', 'read article about new Web FLEX program at Lighthouse Labs!', '2021-02-05', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Don''t forget List 1', 'call landlord about front door', '2021-04-11', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Don''t forget List 1', 'buy new earphones', '2021-05-01', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Don''t forget List 1', 'submit receipts to insurance', '2021-05-13', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Don''t forget List 1', 'pick-up groceries for date night', '2021-05-25', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Week-end List', 'manicure scheduled for Saturday', '2021-06-20', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'School List', 'buy all school books for English class', '2021-06-25', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Birthday', 'call dad for his birthday', '2021-07-10', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Self-care', 'manicure scheduled for Saturday', '2021-07-30', TRUE);
 
 -- Kira List for each category
 INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (2, 1, 'Films List 1', 'Casino Royale', '2021-10-20', TRUE);
