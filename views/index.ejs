@@ -35,7 +35,7 @@
 <nav>
   <span class="title">SMART List</span>
   <div class="container">
-    <span class="home"><a href="#">Home</a></span>
+    <span class="home"><a href="/api/lists">Home</a></span>
     <span class="login" id="login"><a href="#">Login</a></span>
     <span class="register"><a href="#">Register</a></span>
 
@@ -81,6 +81,7 @@
         </div>
   </div> -->
 
+<<<<<<< HEAD
   <!-- ----------------------------------------------- end of temporary formatting to test books API  -->
 
   <header>
@@ -127,6 +128,56 @@
         <input type="text" name="to_do_date" class="form-control" placeholder="Start date (YYYY-MM-DD)" required
           autofocus>
         <!-- <select class="form-select" aria-label="Default select example">
+=======
+<!-- ----------------------------------------------- end of temporary formatting to test books API  -->
+
+<header>
+
+</header>
+
+
+<!-- modal section -->
+<div class="bg-modal" id="bg-modal">
+  <form action="/api/login" method="POST">
+    <div class="modal-content">
+      <h1>Login</h1>
+      <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
+      <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" id="test">Close</button>
+      <footer>Don't have an account? &nbsp;<a href="#">Click here</a> &nbsp;to register</footer>
+  </form>
+</div>
+</div>
+
+<!-- register modal -->
+<div class="bg-modal_register" id="bg-modal_register">
+  <form action="/api/register" method="POST">
+    <div class="modal-content_register">
+      <h1>Register</h1>
+      <input type="text" name="name" class="form-control" placeholder="name" required autofocus>
+      <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
+      <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" id="test">Close</button>
+      <footer>Already have an account? &nbsp;<a href="">Click here</a> &nbsp;to login</footer>
+  </form>
+</div>
+</div>
+
+<button id="dropdown" type="submit" class="btn btn-primary">Add New Task</button>
+
+<!-- search bar section -->
+<div class="bg-modal_search" id="bg-modal_search">
+  <form action="/api/createtask" method="POST">
+    <div class="modal-content_search">
+      <h1>Add New Task</h1>
+      <input type="text" name="title" class="form-control" placeholder="Task title" required autofocus>
+      <input name="to_do_task" class="form-control" placeholder="Notes" required autofocus>
+      <input type="text" name="to_do_date" class="form-control" placeholder="Start date (YYYY-MM-DD)" required
+        autofocus>
+      <!-- <select class="form-select" aria-label="Default select example">
+>>>>>>> f310f371dc418634fc08f873533f94ebdaa41fb9
         <option selected>Choose a category</option>
         <option value="1">Books</option>
         <option value="2">Movies</option>
