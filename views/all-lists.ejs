@@ -64,8 +64,8 @@
           <% for (const todo of todos) {%>
             <div class="task_card">
               <label class="todo_label"><%= todo.title %></label>
-              <div><%= todo.to_do_task %></div>
-              <div><%= todo.to_do_date %></div>
+              <div class="to_do_task"><%= todo.to_do_task %></div>
+              <div class="to_do_date"><%= todo.to_do_date %></div>
             </div>
             <% } %>
       </div>
