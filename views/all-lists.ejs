@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
   <link rel="stylesheet" href="/styles/main.css" type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tasklist.css" type="text/css" />
   <!-- <link rel="stylesheet" href="/styles/header.css" type="text/css" /> -->
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -55,22 +56,23 @@
         <li id="resturaunt-icon"><a href="/api/allRestaurants"><i class="fas fa-utensils"></i></a></li>
       </ul>
     </div>
+
     <div class="main_content">
-      <div class="header">My Lists</div>
-      <% for (const todo of todos) {%>
-        <ul>
-          <li><%= todo.title %></li>
-          <li><%= todo.to_do_task %></li>
-          <li><%= todo.to_do_date %></li>
-        </ul>
-      <% } %>
+    <div class="header">My Lists</div>
+
+      <div class="list-container">
+          <% for (const todo of todos) {%>
+            <div class="task_card">
+              <label class="todo_label"><%= todo.title %></label>
+              <div><%= todo.to_do_task %></div>
+              <div><%= todo.to_do_date %></div>
+            </div>
+            <% } %>
+      </div>
+
     </div>
-    <div>
-    </div>
-  </div>
 
   <header>
-
   </header>
 
 
