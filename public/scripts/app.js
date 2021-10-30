@@ -1,15 +1,13 @@
 // Clean up code
 
 $(document).ready(function () {
-
   // Displays Books once book-icon is clicked
   const booksSection = function () {
-
     const HTML = `<div class='header'>Books<div>`;
 
-    $('#book-icon').click(function () {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#book-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
@@ -17,12 +15,11 @@ $(document).ready(function () {
 
   //Displays shopping list when shopping icon is clicked
   const shoppingSection = function () {
-
     const HTML = `<div class='header'>Shopping<div>`;
 
-    $('#shopping-icon').click(function () {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#shopping-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
@@ -30,12 +27,11 @@ $(document).ready(function () {
 
   // Displays movie lists when movie icon is clicked
   const moviesSection = function () {
-
     const HTML = `<div class='header'>Movies<div>`;
 
-    $('#movie-icon').click(function () {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#movie-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
@@ -43,28 +39,26 @@ $(document).ready(function () {
 
   // Displays resturant lists when resturant icon is displayed
   const restaurantSection = function () {
-
     const HTML = `<div class='header'>Restaurants<div>`;
 
-    $('#resturaunt-icon').click(function () {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $("#resturaunt-icon").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
     });
     return;
   };
   restaurantSection();
 
   const homeSection = function () {
-
     const HTML = `<div class='header'>My Lists<div>`;
 
-    $('.home').click(function () {
-      $('.header').hide();
-      $('.main_content').append(HTML);
+    $(".home").click(function () {
+      $(".header").hide();
+      $(".main_content").append(HTML);
       $.ajax({
         method: "GET",
         url: "/api/lists",
-        type: 'json',
+        type: "json",
       });
     });
     return;
@@ -72,40 +66,37 @@ $(document).ready(function () {
   homeSection();
 
   const registrationToggle = function () {
-
-    $('.register').on('click', function () {
-      $('.bg-modal_register').css({ 'visibility': 'visible' });
+    $(".register").on("click", function () {
+      $(".bg-modal_register").css({ visibility: "visible" });
     });
 
-    $('button').on('click', function () {
-      $('.bg-modal_register').css({ 'visibility': 'hidden' });
+    $("button").on("click", function () {
+      $(".bg-modal_register").css({ visibility: "hidden" });
     });
   };
 
   const loginToggle = function () {
-    $('.login').on('click', function () {
-      $('.bg-modal').css({ 'visibility': 'visible' });
+    $(".login").on("click", function () {
+      $(".bg-modal").css({ visibility: "visible" });
     });
 
-    $('button').on('click', function () {
-      $('.bg-modal').css({ 'visibility': 'hidden' });
+    $("button").on("click", function () {
+      $(".bg-modal").css({ visibility: "hidden" });
     });
   };
   const createNewTaskToggle = function () {
-    $('#dropdown').on('click', function () {
-      $('.bg-modal_search').css({ 'visibility': 'visible' });
+    $("#dropdown").on("click", function () {
+      $(".bg-modal_search").css({ visibility: "visible" });
     });
 
-    $('#close').on('click', function () {
-      $('.bg-modal_search').css({ 'visibility': 'hidden' });
+    $("#close").on("click", function () {
+      $(".bg-modal_search").css({ visibility: "hidden" });
     });
   };
-
 
   createNewTaskToggle();
   loginToggle();
   registrationToggle();
-
 
   // $('.search-box').submit(function(event) {
   //   event.preventDefault();
@@ -119,19 +110,22 @@ $(document).ready(function () {
   //   })
   // })
 
-
-
   // ----------- API SECTION ---------- //
   // Books API
   //values that we will use from the res API (JSON results)
   let item, title, author, bookImg;
   let outputList = document.getElementById("list-output");
   let bookURL = "https://www.googleapis.com/books/v1/volumes?q=";
-  let apiKey = "key=AIzaSyDtXC7kb6a7xKJdm_Le6_BYoY5biz6s8Lw";
+  // let apiKey = "key=AIzaSyDtXC7kb6a7xKJdm_Le6_BYoY5biz6s8Lw";
 
   // default img if return does not have an image
   let placeHolder = '<img src="https://via.placeholder.com/150">';
   let searchData;
+
+  // Event handler for text-box to remove error
+  $("#search-box").keydown(function () {
+    $("#error").text("").slideUp(500);
+  });
 
   //-------------------------------------- listener for search/submit button (See HTML) - ex here: "#search"
   $("#search").click(function () {
@@ -154,7 +148,11 @@ $(document).ready(function () {
           console.log("Response from AJAX request", response);
 
           if (response.totalItems === 0) {
-            alert("No results!... try again!");
+            console.log("error here");
+            $("#error").text("🛑 No results!... try again!").slideDown(500);
+            // $("#error").removeClass("error");
+            return;
+            // alert("No results!... try again!");
           } else {
             $("#title").animate({ "margin-top": "5px" }, 1000); //search box animation
             $(".book-list").css("visibility", "visible");
@@ -224,4 +222,4 @@ $(document).ready(function () {
   };
 });
 
-$('#myModal#exampleModalCenter').modal('show');
+$("#myModal#exampleModalCenter").modal("show");

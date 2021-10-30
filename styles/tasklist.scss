@@ -1,0 +1,12 @@
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.task_card {
+  flex: 0 0 30%;
+  background-color: rgb(211, 209, 209);
+  box-shadow: 0 0 2px black;
+  margin-bottom: 5px;
+}
