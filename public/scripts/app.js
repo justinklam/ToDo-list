@@ -1,13 +1,13 @@
 // Clean up code
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   // Displays Books once book-icon is clicked
-  const booksSection = function() {
+  const booksSection = function () {
 
     const HTML = `<div class='header'>Books<div>`;
 
-    $('#book-icon').click(function() {
+    $('#book-icon').click(function () {
       $('.header').hide();
       $('.main_content').append(HTML);
     });
@@ -16,11 +16,11 @@ $(document).ready(function() {
   booksSection();
 
   //Displays shopping list when shopping icon is clicked
-  const shoppingSection = function() {
+  const shoppingSection = function () {
 
     const HTML = `<div class='header'>Shopping<div>`;
 
-    $('#shopping-icon').click(function() {
+    $('#shopping-icon').click(function () {
       $('.header').hide();
       $('.main_content').append(HTML);
     });
@@ -29,11 +29,11 @@ $(document).ready(function() {
   shoppingSection();
 
   // Displays movie lists when movie icon is clicked
-  const moviesSection = function() {
+  const moviesSection = function () {
 
     const HTML = `<div class='header'>Movies<div>`;
 
-    $('#movie-icon').click(function() {
+    $('#movie-icon').click(function () {
       $('.header').hide();
       $('.main_content').append(HTML);
     });
@@ -42,11 +42,11 @@ $(document).ready(function() {
   moviesSection();
 
   // Displays resturant lists when resturant icon is displayed
-  const restaurantSection = function() {
+  const restaurantSection = function () {
 
     const HTML = `<div class='header'>Restaurants<div>`;
 
-    $('#resturaunt-icon').click(function() {
+    $('#resturaunt-icon').click(function () {
       $('.header').hide();
       $('.main_content').append(HTML);
     });
@@ -54,11 +54,11 @@ $(document).ready(function() {
   };
   restaurantSection();
 
-  const homeSection = function() {
+  const homeSection = function () {
 
     const HTML = `<div class='header'>My Lists<div>`;
 
-    $('.home').click(function() {
+    $('.home').click(function () {
       $('.header').hide();
       $('.main_content').append(HTML);
       $.ajax({
@@ -71,32 +71,32 @@ $(document).ready(function() {
   };
   homeSection();
 
-  const registrationToggle = function() {
+  const registrationToggle = function () {
 
-    $('.register').on('click', function() {
+    $('.register').on('click', function () {
       $('.bg-modal_register').css({ 'visibility': 'visible' });
     });
 
-    $('button').on('click', function() {
+    $('button').on('click', function () {
       $('.bg-modal_register').css({ 'visibility': 'hidden' });
     });
   };
 
-  const loginToggle = function() {
-    $('.login').on('click', function() {
+  const loginToggle = function () {
+    $('.login').on('click', function () {
       $('.bg-modal').css({ 'visibility': 'visible' });
     });
 
-    $('button').on('click', function() {
+    $('button').on('click', function () {
       $('.bg-modal').css({ 'visibility': 'hidden' });
     });
   };
-  const createNewTaskToggle = function() {
-    $('#dropdown').on('click', function() {
+  const createNewTaskToggle = function () {
+    $('#dropdown').on('click', function () {
       $('.bg-modal_search').css({ 'visibility': 'visible' });
     });
 
-    $('#test').on('click', function() {
+    $('#close').on('click', function () {
       $('.bg-modal_search').css({ 'visibility': 'hidden' });
     });
   };
@@ -134,7 +134,7 @@ $(document).ready(function() {
   let searchData;
 
   //-------------------------------------- listener for search/submit button (See HTML) - ex here: "#search"
-  $("#search").click(function() {
+  $("#search").click(function () {
     // empty HTML output
     outputList.innerHTML = "";
 
@@ -149,7 +149,7 @@ $(document).ready(function() {
       $.ajax({
         url: bookURL + searchData,
         dataType: "json",
-        success: function(response) {
+        success: function (response) {
           // display in console
           console.log("Response from AJAX request", response);
 
@@ -161,7 +161,7 @@ $(document).ready(function() {
             displayResults(response);
           }
         },
-        error: function() {
+        error: function () {
           alert("Something went wrong.. <br>" + "Try again!");
         },
       });
@@ -171,7 +171,7 @@ $(document).ready(function() {
   });
   // function to display results in HTML | loop through items: Array(10) from books API to capture elements we want
 
-  const displayResults = function(response) {
+  const displayResults = function (response) {
     for (let i = 0; i < response.items.length; i += 1) {
       item = response.items[i];
 
@@ -195,7 +195,7 @@ $(document).ready(function() {
 
   // template for bootstrap cards
 
-  const formatOutput = function(bookImg, title, author) {
+  const formatOutput = function (bookImg, title, author) {
     // view the book once user clicks on the link
     // let viewUrl = "book.html ? isbn = " + bookIsbn; //constructing link for bookviewer
 
@@ -219,7 +219,7 @@ $(document).ready(function() {
   };
 
   //handling error for empty search box
-  const displayError = function() {
+  const displayError = function () {
     alert("Search term can not be empty!");
   };
 });
