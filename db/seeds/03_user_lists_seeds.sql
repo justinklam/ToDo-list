@@ -5,12 +5,12 @@ INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_
 INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 4, 'Products List 1', 'new iPhone out Sept 25th!', '2021-04-20', TRUE);
 INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 5, 'Other List 1', 'Oil change due Friday', '2021-05-20', TRUE);
 -- Alice multiple books
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'Wolf Hall', '2009-09-01', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'Gilead', '2004-10-02', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'Secondhand Time', '2016-10-03', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'Never Let Me Go', '2005-09-01', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'Austerlitz', '2001-10-02', TRUE);
-INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 1, 'Must Read Books!', 'The Amber Spyglass', '2000-10-03', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 3, 'Must Read Books!', 'Wolf Hall', '2009-09-01', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 3, 'Must Read Books!', 'Gilead', '2004-10-02', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 3, 'Must Read Books!', 'Secondhand Time', '2016-10-03', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 3, 'Must Read Books!', 'Never Let Me Go', '2005-09-01', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 3, 'Must Read Books!', 'Austerlitz', '2001-10-02', TRUE);
+INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 3, 'Must Read Books!', 'The Amber Spyglass', '2000-10-03', TRUE);
 -- Alice multiple Restaurants
 INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Antonietta', '2021-06-05', TRUE);
 INSERT INTO user_lists (user_id, category_id, title, to_do_task, to_do_date, is_active) VALUES (1, 2, 'Restaurants List 1', 'Hoogan & Beaufort', '2021-07-01', TRUE);
